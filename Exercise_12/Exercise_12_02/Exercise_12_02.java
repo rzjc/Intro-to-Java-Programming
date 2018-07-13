@@ -11,10 +11,9 @@ public class Exercise_12_02 {
 		Scanner input = new Scanner(System.in);
 		boolean continueInput = true;
 
-		// Prompt the user to enter two integers
-		System.out.print("Enter two numbers: ");
-		do {
+		while (continueInput) {
 			try {
+				System.out.print("Enter two numbers: ");
 				int number1 = input.nextInt();
 				int number2 = input.nextInt();
 
@@ -29,6 +28,6 @@ public class Exercise_12_02 {
 					"Incorrect input: two integers are required) ");
 				input.nextLine(); // Discard input
 			}
-		} while (continueInput);
+		} ;
 	}
 }
