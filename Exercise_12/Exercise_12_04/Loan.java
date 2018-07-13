@@ -38,7 +38,10 @@ public class Loan {
 	    number of years, and loan amount
 	 */
 	public Loan(double annualInterestRate, int numberOfYears,
-		double loanAmount) {
+		double loanAmount) throws IllegalArgumentException  {
+		if (annualInterestRate <= 0 || numberOfYears <= 0 || loanAmount <= 0) {
+                    throw new IllegalArgumentException();
+                }
 		setAnnualInterestRate(annualInterestRate);
 		setNumberOfYears(numberOfYears);
 		setLoanAmount(loanAmount);
